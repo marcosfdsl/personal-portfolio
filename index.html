@@ -1000,12 +1000,10 @@
         <!-- Contenido de fondo3 (AYUDA) -->
         <div class="flex flex-col justify-center w-screen h-screen fondos fondo3">
             <div class="h-full flex flex-col justify-center items-center">
-                <p class="m-8 text-center text-white">Este es el portfolio de Marcos Fernández de Salamanca López, un
-                    joven de 22 años de la localidad de Torrelodones, Madrid.</p>
+                <p class="m-8 text-center text-white">Para desplazarse en escritorio, utilice la rueda de
+                    desplazamiento del ratón o pulse los botones del menú superior.</p>
                 <p class="m-8 text-center text-white">Para desplazarse en dispositivos móviles, utilice el botón de la
                     esquina superior izquierda para desplegar el menú.</p>
-                <p class="m-8 text-center text-white">Para desplazarse en escritorios, utilice la rueda de
-                    desplazamiento del ratón o pulse los botones del menú superior.</p>
             </div>
         </div>
     </div>
@@ -1180,7 +1178,6 @@
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
-                    infocv.scrollTo(0, 0);
                     scrollmusica.scrollTo(0, 0);
                     scrollhosteleria.scrollTo(0, 0);
                     scrollgenealogia.scrollTo(0, 0);
@@ -1199,6 +1196,12 @@
                     document.getElementById("btnhome").classList.remove("subrayado");
                     document.getElementById("btnabout").classList.add("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
+                    // Reinicia scrolls
+                    infocv.scrollTo(0, 0);
+                    scrollmusica.scrollTo(0, 0);
+                    scrollhosteleria.scrollTo(0, 0);
+                    scrollgenealogia.scrollTo(0, 0);
+                    scrolldesarrollo.scrollTo(0, 0);
                 }
                 // Si se está en fondo3
                 else if (estaCerca(document.querySelector('.fondo3'))) {
