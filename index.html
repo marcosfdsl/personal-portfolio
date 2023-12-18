@@ -1029,10 +1029,11 @@
         const fondo2 = document.querySelector('.fondo2');
         const fondo3 = document.querySelector('.fondo3');
         const contenedorfondos = document.querySelector('.contenedorfondos');
-        let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
+
         let scrollHeight = contenedorfondos.scrollHeight;
         // A Home
         document.getElementById('btnhome').addEventListener('click', function () {
+            let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del scrollHeight de contenedorfondos, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
                 fondo2.style.display = 'flex';
