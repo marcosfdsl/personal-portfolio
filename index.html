@@ -64,8 +64,8 @@
     <!-- Fondos 1, 2 y 3 -->
     <div class="contenedorfondos">
 
-        <!-- Contenido de fondo2 (CURRÍCULUM) -->
-        <div class="flex flex-col justify-center w-screen h-screen fondos fondo2">
+        <!-- Contenido de fondo1 (CURRÍCULUM) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo1">
 
             <div id="infocv"
                 class="overflow-y-auto w-5/6 lg:w-2/3 h-2/3 lg:h-3/4 self-center relative lg:mt-8 bg-white rounded-3xl">
@@ -78,7 +78,7 @@
                         <!-- Foto Marcos -->
                         <a href="https://www.linkedin.com/in/marcos-fernandez-de-salamanca/" target="_blank">
                             <img src="fotos/foto.png" alt="Foto Marcos"
-                                class="justify-center w-28 h-28 mb-4 object-cover rounded-full agrandar3">
+                                class="justify-center w-28 h-28 mb-4 object-cover rounded-full agrandar2">
                         </a>
 
                         <!-- Info Marcos -->
@@ -309,8 +309,8 @@
 
         </div>
 
-        <!-- Contenido de fondo1 (PORTFOLIO) -->
-        <div class="flex flex-col justify-center w-screen h-screen fondos fondo1">
+        <!-- Contenido de fondo2 (PORTFOLIO) -->
+        <div class="flex flex-col justify-center w-screen h-screen fondos fondo2">
 
             <div class="flex justify-center items-center w-full h-full z-10">
                 <div class="grid grid-cols-3 justify-center items-center mb-8">
@@ -1000,7 +1000,7 @@
         <!-- Contenido de fondo3 (AYUDA) -->
         <div class="flex flex-col justify-center w-screen h-screen fondos fondo3">
             <div class="h-full flex flex-col justify-center items-center">
-                <p class="m-8 text-center text-white">Este es el portfolio de Marcos Fernández de Salamanca (Sofos), un
+                <p class="m-8 text-center text-white">Este es el portfolio de Marcos Fernández de Salamanca López, un
                     joven de 22 años de la localidad de Torrelodones, Madrid.</p>
                 <p class="m-8 text-center text-white">Para desplazarse en dispositivos móviles, utilice el botón de la
                     esquina superior izquierda para desplegar el menú.</p>
@@ -1025,14 +1025,14 @@
         document.addEventListener("click", () => menu.classList.add("hidden"));
 
         // VISIBILIDAD FONDO2 SEGÚN ORIGEN Y DESTINO
-        const fondo1 = document.querySelector('.fondo2');
+        const fondo1 = document.querySelector('.fondo1');
         const fondo2 = document.querySelector('.fondo2');
         const fondo3 = document.querySelector('.fondo3');
         const contenedorfondos = document.querySelector('.contenedorfondos');
         let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
         let scrollHeight = contenedorfondos.scrollHeight;
         // A Home
-        document.getElementById('btnabout').addEventListener('click', function () {
+        document.getElementById('btnhome').addEventListener('click', function () {
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del scrollHeight de contenedorfondos, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
                 fondo2.style.display = 'flex';
@@ -1072,8 +1072,8 @@
 
         // Botones de navegación entre fondos
         const actions = {
-            "#btnabout": document.querySelector('.fondo1').offsetTop,
-            "#btnhome": document.querySelector('.fondo2').offsetTop,
+            "#btnhome": document.querySelector('.fondo1').offsetTop,
+            "#btnabout": document.querySelector('.fondo2').offsetTop,
             "#btnhelp": document.querySelector('.fondo3').offsetTop
         };
         for (let [btn, top] of Object.entries(actions)) {
@@ -1120,7 +1120,7 @@
                 player.pauseVideo();
             }
         };
-        ["infomusica", "infohosteleria", "infogenealogia", "infodesarrollo", "boton", "btnabout", "btnhome", "btnhelp"].forEach(btnId => {
+        ["infomusica", "infohosteleria", "infogenealogia", "infodesarrollo", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
             document.getElementById(btnId).addEventListener("click", () => {
                 esconderinfo('infomusica');
                 esconderinfo('infohosteleria');
@@ -1152,7 +1152,7 @@
         contenedorfondos.addEventListener('scroll', function () {
             let scrollTimeout;
             clearTimeout(scrollTimeout);
-            const buttonIDs = ['btnabout', 'btnabout', 'btnhelp', 'btnmusica', 'btnhosteleria', 'btngenealogia', 'btndesarrollo'];
+            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp', 'btnmusica', 'btnhosteleria', 'btngenealogia', 'btndesarrollo'];
             buttonIDs.forEach(id => {
                 const button = document.getElementById(id);
                 if (button) button.setAttribute('disabled', 'disabled');
@@ -1175,8 +1175,8 @@
                         if (button) button.removeAttribute('disabled');
                     });
                     // Subraya Home
-                    document.getElementById("btnabout").classList.add("subrayado");
-                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnhome").classList.add("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
                     infocv.scrollTo(0, 0);
@@ -1195,8 +1195,8 @@
                         if (button) button.removeAttribute('disabled');
                     });
                     // Subraya About
-                    document.getElementById("btnabout").classList.remove("subrayado");
-                    document.getElementById("btnhome").classList.add("subrayado");
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.add("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
                 }
                 // Si se está en fondo3
@@ -1209,8 +1209,8 @@
                         if (button) button.removeAttribute('disabled');
                     });
                     // Subraya Help
-                    document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.add("subrayado");
                     // Reinicia scrolls
                     infocv.scrollTo(0, 0);
