@@ -106,11 +106,11 @@ body {
 }
 
 .rotar.agrandar:hover {
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1.1);
 }
 
 .desrotar.agrandar:hover {
-    transform: rotate(-45deg) scale(1.2);
+    transform: rotate(-45deg) scale(1.1);
 }
 
 /* Hover agrandar botón descarga CV */
