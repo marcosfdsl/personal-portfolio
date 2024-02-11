@@ -113,24 +113,6 @@ body {
     transform: rotate(-45deg) scale(1.1);
 }
 
-/* Hover agrandar botón descarga CV */
-.agrandar2 {
-    transition: all ease 0.5s;
-}
-
-.agrandar2:hover {
-    transform: scale(1.1);
-}
-
-/* Hover agrandar foto CV */
-.agrandar3 {
-    transition: all ease 0.5s;
-}
-
-.agrandar3:hover {
-    transform: scale(1.05);
-}
-
 /* Flecha transparencia */
 .transparencia {
     color: rgba(255, 255, 255, 0.452)
@@ -173,23 +155,6 @@ body {
     animation: fadeInUnderline 0.8s forwards;
 }
 
-/* Video YouTube */
-.videocontenedor {
-    position: relative;
-    width: 100%;
-    padding-top: 60%;
-    margin-top: 32px;
-    margin-bottom: 8px;
-}
-
-.video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 /* Responsive PC */
 @media (min-width: 1024px) {
 
@@ -201,22 +166,5 @@ body {
     /* Hace fondo menú transparente */
     #menu {
         background: transparent;
-    }
-
-    /* Video YouTube PC */
-    .videocontenedor {
-        width: 80%;
-        padding-top: 40%;
-    }
-}
-
-/* Responsive móvil */
-@media (max-width: 1024px) {
-    .letra {
-        font-size: 14px;
-    }
-    
-    .letra2 {
-        font-size: 11px;
     }
 }
