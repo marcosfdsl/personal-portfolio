@@ -167,4 +167,8 @@ body {
     #menu {
         background: transparent;
     }
+
+    .bg-sofosbars {
+        background-image: url('fotos/webs/sofosbars.jpg');
+    }
 }
