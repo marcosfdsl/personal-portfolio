@@ -582,18 +582,11 @@
         }
 
 
-        // Cerrar info fondo1 y pausar id="video" de "infomusica" al salir
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('video');
-        }
+        // Cerrar info fondo1
         const esconderinfo = (sectionId) => {
             let section = document.getElementById(sectionId);
             section.style.opacity = "0";
             section.style.transform = "translateY(100%)";
-            if (player && player.pauseVideo) {
-                player.pauseVideo();
-            }
         };
         ["infomusica", "infohosteleria", "infogenealogia", "infodesarrollo", "boton", "btnhome", "btnabout", "btnhelp"].forEach(btnId => {
             document.getElementById(btnId).addEventListener("click", () => {
@@ -602,12 +595,9 @@
                 esconderinfo('infogenealogia');
                 esconderinfo('infodesarrollo');
 
-                // Reinicia scroll info
                 setTimeout(() => {
-                    scrollmusica.scrollTo(0, 0);
-                    scrollhosteleria.scrollTo(0, 0);
-                    scrollgenealogia.scrollTo(0, 0);
-                    scrolldesarrollo.scrollTo(0, 0);
+                    // Reinicia scrolls
+                    reiniciarScroll();
                 }, 200);
             });
         });
@@ -654,10 +644,7 @@
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
-                    scrollmusica.scrollTo(0, 0);
-                    scrollhosteleria.scrollTo(0, 0);
-                    scrollgenealogia.scrollTo(0, 0);
-                    scrolldesarrollo.scrollTo(0, 0);
+                    reiniciarScroll();
                 }
                 // Si se está en fondo2
                 else if (estaCerca(document.querySelector('.fondo2'))) {
@@ -673,11 +660,7 @@
                     document.getElementById("btnabout").classList.add("subrayado");
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
-                    infocv.scrollTo(0, 0);
-                    scrollmusica.scrollTo(0, 0);
-                    scrollhosteleria.scrollTo(0, 0);
-                    scrollgenealogia.scrollTo(0, 0);
-                    scrolldesarrollo.scrollTo(0, 0);
+                    reiniciarScroll();
                 }
                 // Si se está en fondo3
                 else if (estaCerca(document.querySelector('.fondo3'))) {
@@ -693,14 +676,18 @@
                     document.getElementById("btnabout").classList.remove("subrayado");
                     document.getElementById("btnhelp").classList.add("subrayado");
                     // Reinicia scrolls
-                    infocv.scrollTo(0, 0);
-                    scrollmusica.scrollTo(0, 0);
-                    scrollhosteleria.scrollTo(0, 0);
-                    scrollgenealogia.scrollTo(0, 0);
-                    scrolldesarrollo.scrollTo(0, 0);
+                    reiniciarScroll();
                 }
             }, 10);
         });
+
+        // Reinicia scrolls
+        function reiniciarScroll() {
+            scrollmusica.scrollTo(0, 0);
+            scrollhosteleria.scrollTo(0, 0);
+            scrollgenealogia.scrollTo(0, 0);
+            scrolldesarrollo.scrollTo(0, 0);
+        }
 
     </script>
 
