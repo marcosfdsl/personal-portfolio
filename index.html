@@ -561,7 +561,8 @@
                                         header.
                                     </p>
                                 </div>
-                                <a href="https://frontend-frameworks.netlify.app/" target="_blank" class="lg:mx-48 mt-8">
+                                <a href="https://frontend-frameworks.netlify.app/" target="_blank"
+                                    class="lg:mx-48 mt-8">
                                     <picture>
                                         <source media="(min-width: 1024px)" srcset="fotos/webs/frameworks.webp">
                                         <img class="cursor-pointer hover:shadow-2xl hover:brightness-110 transition-all duration-700 ease-in-out"
@@ -718,7 +719,7 @@
 
         // Dropdown oculto (menú para móvil)
         const menu = document.querySelector("#menu");
-        const toggleMenu = (event) => {          
+        const toggleMenu = (event) => {
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
@@ -834,6 +835,10 @@
                 };
                 // Si se está en fondo1
                 if (estaCerca(document.querySelector('.fondo1'))) {
+                    // Subraya Home
+                    document.getElementById("btnhome").classList.add("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
                     // Flecha no girada
                     document.getElementById("flecha").classList.remove("girarflecha");
                     // Deshabilita botones hasta completar scroll
@@ -841,15 +846,15 @@
                         const button = document.getElementById(id);
                         if (button) button.removeAttribute('disabled');
                     });
-                    // Subraya Home
-                    document.getElementById("btnhome").classList.add("subrayado");
-                    document.getElementById("btnabout").classList.remove("subrayado");
-                    document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
                 // Si se está en fondo2
                 else if (estaCerca(document.querySelector('.fondo2'))) {
+                    // Subraya About
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.add("subrayado");
+                    document.getElementById("btnhelp").classList.remove("subrayado");
                     // Flecha no girada
                     document.getElementById("flecha").classList.remove("girarflecha");
                     // Deshabilita botones hasta completar scroll
@@ -857,15 +862,15 @@
                         const button = document.getElementById(id);
                         if (button) button.removeAttribute('disabled');
                     });
-                    // Subraya About
-                    document.getElementById("btnhome").classList.remove("subrayado");
-                    document.getElementById("btnabout").classList.add("subrayado");
-                    document.getElementById("btnhelp").classList.remove("subrayado");
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
                 // Si se está en fondo3
                 else if (estaCerca(document.querySelector('.fondo3'))) {
+                    // Subraya Help
+                    document.getElementById("btnhome").classList.remove("subrayado");
+                    document.getElementById("btnabout").classList.remove("subrayado");
+                    document.getElementById("btnhelp").classList.add("subrayado");
                     // Flecha girada
                     document.getElementById("flecha").classList.add("girarflecha");
                     // Deshabilita botones hasta completar scroll
@@ -873,14 +878,10 @@
                         const button = document.getElementById(id);
                         if (button) button.removeAttribute('disabled');
                     });
-                    // Subraya Help
-                    document.getElementById("btnhome").classList.remove("subrayado");
-                    document.getElementById("btnabout").classList.remove("subrayado");
-                    document.getElementById("btnhelp").classList.add("subrayado");
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
-            }, 10);
+            }, 1);
         });
 
         // Reinicia scrolls
