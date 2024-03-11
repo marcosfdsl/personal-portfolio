@@ -720,6 +720,8 @@
         const menu = document.querySelector("#menu");
         const toggleMenu = (event) => {
             alert(contenedorfondos.scrollTop);
+            alert(document.querySelector('.fondo1').offsetTop);
+            
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
