@@ -734,6 +734,7 @@
         let scrollHeight = contenedorfondos.scrollHeight;
         // A Home
         document.getElementById('btnhome').addEventListener('click', function () {
+            alert(document.querySelector('.fondo1').offsetTop);
             let scrollPosition = document.querySelector('.contenedorfondos').scrollTop;
             // Cuando se quiere ir a fondo1 desde fondo2, si el scrollPosition es aprox un tercio del scrollHeight de contenedorfondos, fondo2 se hace visible
             if (scrollPosition >= scrollHeight / 3.5 && scrollPosition <= scrollHeight / 2.5) {
@@ -746,6 +747,7 @@
                     fondo2.style.display = 'flex';
                 }, 500);
             }
+            alert(document.querySelector('.fondo1').offsetTop);
         });
 
         // A About
@@ -928,7 +930,7 @@
         // Reinicia scrolls
         function reiniciarScroll() {
             infocv.scrollTo(0, 0);
-             
+
             scrollportfolio.scrollTo(0, 0);
             scrollsalamanca.scrollTo(0, 0);
             scrollmusica.scrollTo(0, 0);
