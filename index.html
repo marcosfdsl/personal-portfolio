@@ -719,6 +719,7 @@
         // Dropdown oculto (menú para móvil)
         const menu = document.querySelector("#menu");
         const toggleMenu = (event) => {
+            alert(contenedorfondos.scrollTop);
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
@@ -774,7 +775,7 @@
 
         // Botones de navegación entre fondos
         const actions = {
-            "#btnhome": 1,
+            "#btnhome": document.querySelector('.fondo1').offsetTop,
             "#btnabout": document.querySelector('.fondo2').offsetTop,
             "#btnhelp": document.querySelector('.fondo3').offsetTop
         };
