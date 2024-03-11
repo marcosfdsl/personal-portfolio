@@ -721,7 +721,6 @@
         const menu = document.querySelector("#menu");
         const toggleMenu = (event) => {
             alert(contenedorfondos.scrollTop);
-            alert(document.querySelector('.fondo1').offsetTop);
 
             menu.classList.toggle("hidden");
             event.stopPropagation();
@@ -791,7 +790,7 @@
                             top: top,
                             behavior: "smooth"
                         });
-                    }, 100);
+                    }, 1000);
                 });
             }
         }
