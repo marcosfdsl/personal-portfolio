@@ -720,8 +720,6 @@
         // Dropdown oculto (menú para móvil)
         const menu = document.querySelector("#menu");
         const toggleMenu = (event) => {
-            alert(contenedorfondos.scrollTop);
-
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
@@ -790,7 +788,7 @@
                             top: top,
                             behavior: "smooth"
                         });
-                    }, 1000);
+                    }, 300);
                 });
             }
         }
