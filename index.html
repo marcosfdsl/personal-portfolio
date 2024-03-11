@@ -850,11 +850,6 @@
         contenedorfondos.addEventListener('scroll', function () {
             let scrollTimeout;
             clearTimeout(scrollTimeout);
-            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp'];
-            buttonIDs.forEach(id => {
-                const button = document.getElementById(id);
-                if (button) button.setAttribute('disabled', 'disabled');
-            });
             // Al acabar scroll
             scrollTimeout = setTimeout(function () {
                 const margen = 50;
@@ -871,11 +866,6 @@
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Flecha no girada
                     document.getElementById("flecha").classList.remove("girarflecha");
-                    // Deshabilita botones hasta completar scroll
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
@@ -887,11 +877,6 @@
                     document.getElementById("btnhelp").classList.remove("subrayado");
                     // Flecha no girada
                     document.getElementById("flecha").classList.remove("girarflecha");
-                    // Deshabilita botones hasta completar scroll
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
@@ -903,11 +888,6 @@
                     document.getElementById("btnhelp").classList.add("subrayado");
                     // Flecha girada
                     document.getElementById("flecha").classList.add("girarflecha");
-                    // Deshabilita botones hasta completar scroll
-                    buttonIDs.forEach(id => {
-                        const button = document.getElementById(id);
-                        if (button) button.removeAttribute('disabled');
-                    });
                     // Reinicia scrolls
                     reiniciarScroll();
                 }
