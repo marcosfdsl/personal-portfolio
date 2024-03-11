@@ -561,7 +561,8 @@
                                         header.
                                     </p>
                                 </div>
-                                <a href="https://frontend-frameworks.netlify.app/" target="_blank" class="lg:mx-48 mt-8">
+                                <a href="https://frontend-frameworks.netlify.app/" target="_blank"
+                                    class="lg:mx-48 mt-8">
                                     <picture>
                                         <source media="(min-width: 1024px)" srcset="fotos/webs/frameworks.webp">
                                         <img class="cursor-pointer hover:shadow-2xl hover:brightness-110 transition-all duration-700 ease-in-out"
@@ -721,7 +722,7 @@
         const toggleMenu = (event) => {
             alert(contenedorfondos.scrollTop);
             alert(document.querySelector('.fondo1').offsetTop);
-            
+
             menu.classList.toggle("hidden");
             event.stopPropagation();
         };
@@ -785,10 +786,12 @@
             if (document.querySelector(btn)) {
                 document.querySelector(btn).addEventListener("click", e => {
                     e.preventDefault();
-                    contenedorfondos.scrollTo({
-                        top: top,
-                        behavior: "smooth"
-                    });
+                    setTimeout(() => {
+                        contenedorfondos.scrollTo({
+                            top: top,
+                            behavior: "smooth"
+                        });
+                    }, 100);
                 });
             }
         }
