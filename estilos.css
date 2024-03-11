@@ -114,24 +114,6 @@ body {
     transition: color 0.3s;
 }
 
-/* Hover azul links */
-.azul:hover {
-    color: #055f86;
-}
-
-/* Hover agrandar iconos rombos */
-.agrandar {
-    transition: transform ease 0.5s;
-}
-
-.rotar.agrandar:hover {
-    transform: rotate(45deg) scale(1.1);
-}
-
-.desrotar.agrandar:hover {
-    transform: rotate(-45deg) scale(1.1);
-}
-
 /* Flecha transparencia */
 .transparencia {
     color: rgba(255, 255, 255, 0.452)
@@ -189,5 +171,23 @@ body {
 
     .bg-sofosbars {
         background-image: url('fotos/webs/sofosbars.jpg');
+    }
+
+    /* Hover azul links */
+    .azul:hover {
+        color: #055f86;
+    }
+
+    /* Hover agrandar iconos rombos */
+    .agrandar {
+        transition: transform ease 0.5s;
+    }
+
+    .rotar.agrandar:hover {
+        transform: rotate(45deg) scale(1.1);
+    }
+
+    .desrotar.agrandar:hover {
+        transform: rotate(-45deg) scale(1.1);
     }
 }
