@@ -819,14 +819,6 @@
         contenedorfondos.addEventListener('scroll', function () {
             let scrollTimeout;
             clearTimeout(scrollTimeout);
-            const buttonIDs = ['btnhome', 'btnabout', 'btnhelp',
-                'btnportfolio1', 'btnportfolio2', 'btnsalamanca1', 'btnsalamanca2', 'btnmusica',
-                'btnframeworks', 'btnnode',
-                'btnclassicars1', 'btnclassicars2', 'btnwordle', 'btnsorolla1', 'btnsorolla2'];
-            buttonIDs.forEach(id => {
-                const button = document.getElementById(id);
-                if (button) button.setAttribute('disabled', 'disabled');
-            });
             // Al acabar scroll
             scrollTimeout = setTimeout(function () {
                 const margen = 50;
