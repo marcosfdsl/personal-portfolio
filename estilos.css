@@ -161,6 +161,10 @@ body {
     animation: fadeInUnderline 0.8s forwards;
 }
 
+.espaciado {
+    letter-spacing: 0.5rem;
+}
+
 /* Responsive PC */
 @media (min-width: 1024px) {
     /* agita logos github y linkedin */
