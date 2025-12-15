@@ -3,6 +3,10 @@
     vertical-align: middle;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
     /* Prevengo copy paste */
     -webkit-user-select: none;
@@ -18,6 +22,7 @@ body {
 .contenedorfondos {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overscroll-behavior-y: none;
     height: 100vh;
 }
 
@@ -108,9 +113,27 @@ body {
     }
 }
 
-/* Color fondo azul info */
-.fondoazul {
-    background-color: #0d91c93a;
+.infocv-mask {
+  --fade: 60px;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black var(--fade),
+    black calc(100% - var(--fade)),
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black var(--fade),
+    black calc(100% - var(--fade)),
+    transparent 100%
+  );
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 /* Azul links */
