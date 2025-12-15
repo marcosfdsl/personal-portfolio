@@ -370,7 +370,7 @@
                           class="enlinea mb-1 w-3 lg:w-4"
                           alt="Símbolo enlace externo"
                           title="Símbolo enlace externo"
-                        /> </a
+                        /></a
                       >)
                     </p>
                     <p class="mt-2">
@@ -1203,7 +1203,7 @@
             // Flecha no girada
             document.getElementById("flecha").classList.remove("girarflecha");
             // Reinicia scrolls
-            reiniciarScroll();
+            reiniciarScroll(); 
           }
           // Si se está en fondo2
           else if (estaCerca(document.querySelector(".fondo2"))) {
@@ -1215,6 +1215,7 @@
             document.getElementById("flecha").classList.remove("girarflecha");
             // Reinicia scrolls
             reiniciarScroll();
+            reiniciarCv();
           }
           // Si se está en fondo3
           else if (estaCerca(document.querySelector(".fondo3"))) {
@@ -1232,8 +1233,6 @@
 
       // Reinicia scrolls
       function reiniciarScroll() {
-        infocv.scrollTo(0, 0);
-
         scrollportfolio.scrollTo(0, 0);
         scrollsalamanca.scrollTo(0, 0);
         scrollmusica.scrollTo(0, 0);
@@ -1244,6 +1243,10 @@
         scrollclassicars.scrollTo(0, 0);
         scrollwordle.scrollTo(0, 0);
         scrollsorolla.scrollTo(0, 0);
+      }
+
+      function reiniciarCv() {
+        infocv.scrollTo(0, 0);
       }
     </script>
   </body>

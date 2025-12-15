@@ -3,10 +3,6 @@
     vertical-align: middle;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 body {
     /* Prevengo copy paste */
     -webkit-user-select: none;

@@ -2198,10 +2198,6 @@ video {
   opacity: 0.8;
 }
 
-.opacity-70 {
-  opacity: 0.7;
-}
-
 .mix-blend-plus-lighter {
   mix-blend-mode: plus-lighter;
 }
@@ -2367,14 +2363,6 @@ video {
 
 .forced-color-adjust-none {
   forced-color-adjust: none;
-}
-
-.\[--fade\:28px\] {
-  --fade: 28px;
-}
-
-.\[-webkit-mask-image\:linear-gradient\(to_bottom\2c transparent\2c black_var\(--fade\)\2c black_calc\(100\%-var\(--fade\)\)\2c transparent\)\] {
-  -webkit-mask-image: linear-gradient(to bottom,transparent,black var(--fade),black calc(100% - var(--fade)),transparent);
 }
 
 @media (min-width: 640px) {
