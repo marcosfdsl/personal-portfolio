@@ -114,7 +114,7 @@ body {
 }
 
 .infocv-mask {
-  --fade: 60px;
+  --fade: 40px;
 
   -webkit-mask-image: linear-gradient(
     to bottom,
